@@ -3,20 +3,19 @@ import java.util.Scanner;
 public class Conta {
     public static void main(String[] args) {
         Scanner leitura = new Scanner(System.in);
-
-        System.out.println("""
-                *************************************************
-                Dados iniciais do Cliente:
-                                
-                                
-                Nome:               Patrick Rebecchi
-                Tipo da Conta:      Conta Corrente
-                Saldo inicial:      R$2500,00
-                                
-                *************************************************
-                """);
         String nome = "Patrick Rebecchi ";
         double saldoInicial = 2500.00;
+        String tipoDeConta = "Corrente";
+
+        System.out.println("****************************************");
+        System.out.println("Dados iniciais do Cliente");
+        System.out.println("  ");
+        System.out.println("Nome: " + nome);
+        System.out.println("Tipo de conta: " + tipoDeConta);
+        System.out.println("Saldo disponivel: R$ " + saldoInicial );
+        System.out.println("  ");
+        System.out.println("*******************************************");
+
         while (true) {
             System.out.println("""
                     Operações:
