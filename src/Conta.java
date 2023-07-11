@@ -29,7 +29,32 @@ public class Conta {
                     """);
             System.out.println("Digite a opção desejada: ");
             int opcao = leitura.nextInt();
-            
+
+            if (opcao == 1){
+                System.out.printf("O Saldo atual do correntista %s é: R$%.2f%n", nome, saldoInicial);
+            } else if (opcao == 2){
+                System.out.println("Qual valor deseja receber: R$");
+                double valorRecebido = leitura.nextDouble();
+                if (valorRecebido < 0) {
+                    System.out.println("Não é possível transferir valor menor que 0");
+                } else {
+                    saldoInicial += valorRecebido;
+                    System.out.println("Saldo atual R$ " + saldoInicial);;
+                }
+            } else if (opcao == 3){
+                System.out.println("Valor que deseja transferir: R$");
+                double valorTransferido = leitura.nextDouble();
+                if (valorTransferido > saldoInicial){
+                    System.out.println("Você não tem saldo suficiente");
+                } else {
+                    saldoInicial -= valorTransferido;
+                    System.out.println("Saldo atual R$ " + saldoInicial);
+                }
+            } else if (opcao == 4) {
+                break;
+            } else {
+                System.out.println("Opção Inválida. Tente novamente !");
+            }
         }
     }
 
